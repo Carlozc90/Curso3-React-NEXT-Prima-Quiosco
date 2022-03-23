@@ -16,7 +16,7 @@ const Sidebar = () => {
 
       <nav className="mt-10">
         {categorias.map((categoria) => (
-          <Categoria categoria={categoria} key={categoria} />
+          <Categoria categoria={categoria} key={categoria.id} />
         ))}
       </nav>
     </>
