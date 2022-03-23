@@ -6,15 +6,25 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed": "esbuild prisma/seed.ts --outfile=node_modules/tmp-seed.cjs --bundle --format=cjs --external:prisma --external:@prisma/client && node node_modules/tmp-seed.cjs --preview-feature"
   },
   "dependencies": {
+    "@prisma/client": "^3.11.0",
+    "@types/react": "^17.0.41",
+    "axios": "^0.26.1",
     "next": "12.1.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "ts-node": "^10.7.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "esbuild": "^0.14.27",
     "eslint": "8.11.0",
-    "eslint-config-next": "12.1.0"
+    "eslint-config-next": "12.1.0",
+    "postcss": "^8.4.12",
+    "prisma": "^3.11.0",
+    "tailwindcss": "^3.0.23"
   }
 }
